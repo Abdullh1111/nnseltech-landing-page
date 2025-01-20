@@ -1,3 +1,4 @@
+import { Wokr7Icon } from "@/assets/Work7";
 import ProjectCarts from "@/components/Projects/ProjectCarts";
 import { Button } from "@/components/ui/button";
 import GlowingText from "@/components/ui/TextHeilight";
@@ -43,6 +44,7 @@ export default function Home() {
       <Button className="">Button</Button>
       <Button variant="secondary">Button</Button>
       <ProjectCarts projects={projects} />
+      <Wokr7Icon />
     </div>
   );
 }
