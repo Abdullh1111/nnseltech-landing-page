@@ -9,7 +9,7 @@ export default function Header() {
       <h2 className="lg:text-[72px] text-[48px]  font-bold text-center lg:mt-36 mt-20">
         Adaptive Logo <TextHeilight text="Design" /> <br /> for Your Brand
       </h2>
-      <Link href="/about">
+      <Link href="/works">
       <Button variant={"secondary"} className="lg:mt-20 mt-10">
         Explore works <GrLinkNext />
       </Button>

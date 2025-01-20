@@ -1,6 +1,7 @@
 // import { TProject } from "@/types/project.interface";
 
 import Header from "@/components/Header";
+import HomeAbout from "@/components/HomeAbout/HomeAbout";
 
 export default function Home() {
   // const projects: TProject[] = [
@@ -36,5 +37,6 @@ export default function Home() {
 
   return <div>
     <Header />
+    <HomeAbout />
   </div>;
 }
