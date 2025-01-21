@@ -17,7 +17,7 @@ export default function ProjectCarts({ projects }: props) {
             width={580}
             height={600}
           />
-          <h2 className="text-2xl font-bold">{project.title}</h2>
+          <h2 className="text-2xl font-bold flex gap-5 items-center">{project.title} <div className="w-10 h-[2px] bg-secondary"></div></h2>
           <p><span className="text-[#606060] mr-5">Client:</span> {project.client}</p>
           <p><span className="text-[#606060] mr-6">Work:</span> {project.work}</p>
         </div>
