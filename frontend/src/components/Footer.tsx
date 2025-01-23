@@ -10,7 +10,7 @@ export default function Footer() {
       <p className="text-secondary md:text-2xl text-xl font-bold">
         Get in Touch With Us
       </p>
-      <h4 className="underline md:text-[64px] text-4xl font-bold mt-10 my-36 ">
+      <h4 className="underline md:text-[64px] text-4xl font-bold mt-10 md:my-36 my-10 ">
         info@aaronn.com
       </h4>
       <div className="flex flex-col md:flex-row gap-10 md:gap-0 justify-around items-center text-2xl font-bold ">

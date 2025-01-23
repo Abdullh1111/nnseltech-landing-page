@@ -10,7 +10,7 @@ export default function ProjectCarts({ projects }: props) {
   return (
     <div className="md:grid grid-cols-2 gap-10">
       {projects.map((project) => (
-        <div key={project.id} className="flex flex-col gap-5 mt-10">
+        <div key={project.id} className="flex flex-col gap-5 mt-10 border border-transparent hover:border-secondary lg:p-10 p-5">
           <Image
             src={project.image}
             alt={project.title}
