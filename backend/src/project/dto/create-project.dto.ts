@@ -22,6 +22,16 @@ export class CreateProjectDto {
   @IsString()
   mainImage?: string;
 
+  @IsOptional()
+  @IsNotEmpty()
+  @IsString()
+  secondImage?: string;
+
+  @IsOptional()
+  @IsNotEmpty()
+  @IsString()
+  thirdImage?: string;
+
   @IsArray()
   @IsString({ each: true })
   otherImages: string[];

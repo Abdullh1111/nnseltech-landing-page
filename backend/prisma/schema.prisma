@@ -21,7 +21,8 @@ model Projects {
   work            String
   story           String
   mainImage       String?
-  otherImages     String[]
+  secondImage     String?
+  thirdImage      String?
   workFlow        String
 
   @@map("project")
