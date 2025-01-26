@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
+import { useCreateProjectMutation } from "@/redux/services/project";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -51,6 +52,9 @@ export function ProjectForm({ className, ...props }: { className?: string }) {
     },
   });
 
+
+  const [update,{data,isLoading, error}] = useCreateProjectMutation();
+
   function onSubmit(values: z.infer<typeof formSchema>) {
     const formData = new FormData();
 
@@ -64,11 +68,13 @@ export function ProjectForm({ className, ...props }: { className?: string }) {
     if (values.thirdImage?.[0]) formData.append("thirdImage", values.thirdImage[0]);
 
     formData.append("workFlow", values.workFlow);
+    console.log(formData);
 
-    // You can now send `formData` to your server using `fetch` or any HTTP client.
-    console.log("Form submitted", values);
+
+    update(formData);
   }
 
+  console.log(data,error)
   return (
     <Form {...form}>
       <form
@@ -193,7 +199,7 @@ export function ProjectForm({ className, ...props }: { className?: string }) {
           )}
         />
 
-        <Button variant="secondary" className="text-2xl font-semibold" type="submit">
+        <Button disabled={isLoading} variant="secondary" className="text-2xl font-semibold" type="submit">
           Send
         </Button>
       </form>

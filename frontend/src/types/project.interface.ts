@@ -3,10 +3,10 @@ export type TProject = {
     name: string; // Name of the project
     client: string; // Client associated with the project
     work: string; // Work details
-    story: string; // Story of the project
+    story?: string; // Story of the project
     mainImage: string; // Optional main image URL
-    secondImage: string; // Optional second image URL
-    thirdImage: string; // Optional third image URL
-    workFlow: string; // Workflow description
+    secondImage?: string; // Optional second image URL
+    thirdImage?: string; // Optional third image URL
+    workFlow?: string; // Workflow description
   };
   
